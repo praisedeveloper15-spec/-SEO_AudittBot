@@ -41,10 +41,6 @@ def check_rank(term: str, domain: str, engine: str = "google",
     """
     Returns (position, url) for the first organic result whose URL contains `domain`,
     or (None, None) if the domain isn't found in the results SerpApi returns.
-
-    Note: `location_code` and `depth` are accepted for interface compatibility with
-    the rest of the app but aren't used the same way SerpApi expects — see
-    https://serpapi.com/locations-api if you want to add precise geo-targeting later.
     """
     if engine not in ENGINE_MAP:
         raise ValueError(f"Unsupported engine: {engine}")
